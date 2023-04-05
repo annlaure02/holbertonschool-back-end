@@ -26,10 +26,12 @@ if __name__ == "__main__":
     for data in todos_data:
         list_csv = []
         if int(argv[1]) == data.get("userId"):
+            task_completed_status = data.get("completed")
+            task_title = data.get("title")
             list_csv.append(user_id)
             list_csv.append(username)
-            list_csv.append(data.get("completed"))
-            list_csv.append(data.get("title"))
+            list_csv.append(task_completed_status)
+            list_csv.append(task_title)
             csv_w.writerow(list_csv)
 
     file.close()
