@@ -28,7 +28,7 @@ if __name__ == "__main__":
             if data.get("completed") is True or data.get("completed") is False:
                 total_tasks += 1
 
-    print("Employee {} is done with tasks({}/{})"
+    print("Employee {} is done with tasks({}/{}):"
           .format(employee_name, completed_tasks, total_tasks))
 
     task_title = ""
