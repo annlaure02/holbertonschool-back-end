@@ -13,19 +13,19 @@ if __name__ == "__main__":
     users = requests.get("https://jsonplaceholder.typicode.com/users")
     users_data = users.json()
     employee_name = ""
-    
+
     for data in users_data:
         if int(argv[1]) == data.get("id"):
             employee_name = data.get("name")
 
     completed_tasks = 0
     total_tasks = 0
-            
+
     for data in todos_data:
         if int(argv[1]) == data.get("userId"):
-            if data.get("completed") == True:
+            if data.get("completed") is True:
                 completed_tasks += 1
-            if data.get("completed") == True or data.get("completed") == False:
+            if data.get("completed") is True or data.get("completed") is False:
                 total_tasks += 1
 
     print("Employee {} is done with tasks ({}/{})"
@@ -34,6 +34,6 @@ if __name__ == "__main__":
     task_title = ""
     for data in todos_data:
         if int(argv[1]) == data.get("userId"):
-            if data.get("completed") == True:
+            if data.get("completed") is True:
                 task_title = data.get("title")
                 print("\t {}".format(task_title))
