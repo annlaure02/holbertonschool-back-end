@@ -37,4 +37,3 @@ if __name__ == "__main__":
             if data.get("completed") is True:
                 task_title = data.get("title")
                 print("\t {}".format(task_title))
-    
