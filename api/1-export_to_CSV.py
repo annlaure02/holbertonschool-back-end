@@ -20,7 +20,7 @@ if __name__ == "__main__":
             user_id = data.get("id")
             username = data.get("username")
 
-    file = open(str(argv[1]) + ".csv", "w", )
+    file = open(str(argv[1]) + ".csv", "w")
     csv_w = csv.writer(file, quoting=csv.QUOTE_ALL)
 
     for data in todos_data:
