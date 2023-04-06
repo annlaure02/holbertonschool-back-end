@@ -27,9 +27,9 @@ if __name__ == "__main__":
             dict1["completed"] = data.get("completed")
             dict1["username"] = username
             list_dict.append(dict1)
-    
+
     dict2 = {}
-    dict2[user_id] = list_dict            
+    dict2[user_id] = list_dict
 
     json_dict = json.dumps(dict2)
     with open(str(argv[1]) + ".json", "w") as file:
